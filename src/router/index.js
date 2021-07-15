@@ -8,8 +8,22 @@ export default new Router({
   routes: [
     {
       path: '/',
-      name: 'HelloWorld',
-      component: HelloWorld
-    }
+      component: () => import('../components/user/app.vue'),
+      children: [{
+        path: '/home',
+        component: () => import('../components/user/index.vue'),
+      }, ],
+    },
+
+    {
+      path: '/admin/',
+      component: () => import('../components/admin/app.vue'),
+      children: [{
+        path: 'dashboard',
+        component: () => import('../components/admin/index.vue'),
+      }, ],
+    },
+
+
   ]
 })
