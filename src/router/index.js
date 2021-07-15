@@ -12,16 +12,20 @@ export default new Router({
       children: [{
         path: '/home',
         component: () => import('../components/user/index.vue'),
-      }, ],
+        },
+      ],
     },
+    //user dashboard end
 
+    //admin dashboard start
     {
       path: '/admin/',
       component: () => import('../components/admin/app.vue'),
       children: [{
         path: 'dashboard',
         component: () => import('../components/admin/index.vue'),
-      }, ],
+        },
+      ],
     },
 
 
