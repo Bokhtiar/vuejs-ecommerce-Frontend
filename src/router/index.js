@@ -16,7 +16,12 @@ export default new Router({
       ],
     },
     //user dashboard end
-
+    //authentication part start
+    {
+      path:'/login',
+      component: () => import('../components/auth/login.vue'),
+    },
+    //authentication part end here
     //admin dashboard start
     {
       path: '/admin/',
@@ -25,6 +30,16 @@ export default new Router({
         path: 'dashboard',
         component: () => import('../components/admin/index.vue'),
         },
+
+        {
+          path: 'color',
+          component: () => import('../components/admin/color/index.vue'),
+        },
+        {
+          path: 'color/create',
+          component: () => import('../components/admin/color/create.vue'),
+        }//color section end
+
       ],
     },
 

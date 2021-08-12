@@ -13,7 +13,7 @@ import 'bootstrap/dist/js/bootstrap.min.js'
 //axios setup
 import axios from 'axios'
 window.axios = axios
-axios.defaults.baseURL = 'http://localhost/laravelVuejsPos/public/api';
+axios.defaults.baseURL = 'http://localhost/LaravelVuejsEcom/public/api';
 window.token = localStorage.getItem('AToken')
 axios.defaults.headers.common['Authorization'] = "Bearer " + token;
 axios.defaults.headers.post['Content-Type'] = 'application/json';
